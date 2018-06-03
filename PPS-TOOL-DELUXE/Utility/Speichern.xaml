@@ -1,0 +1,18 @@
+﻿<Window x:Class="PPS_TOOL_DELUXE.Utility.Speichern"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        mc:Ignorable="d"
+        Title="Speichern" Height="167" Width="384">
+    <Grid>
+        <Label Content="Speichern als:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,20,0,0" FontSize="10"/>
+        <TextBox Name="Textbox_Dateiname" HorizontalAlignment="Left" Height="13" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Margin="95,27,0,0" FontSize="10"/>
+        <Label Content="Unter:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,55,0,0" FontSize="10" RenderTransformOrigin="0.429,0.565"/>
+        <ComboBox Name="Drop_Down_Speicherort" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="95,59,0,0" Height="16" FontSize="10" Background="White" BorderBrush="White"/>
+        <ComboBox x:Name="Drop_Down_Speicherort_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="95,89,0,0" Height="16" FontSize="10" Background="White" BorderBrush="White"/>
+        <Button Name="btn_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="265,60,0,0" Height="15" FontSize="10" BorderBrush="LightGray"/>
+        <Button Name="btn_speichern" Content="Speichern" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="265,90,0,0" RenderTransformOrigin="0.5,0.5" Height="15" FontSize="10" Background="LightBlue" BorderBrush="LightBlue"/>
+    </Grid>
+</Window>

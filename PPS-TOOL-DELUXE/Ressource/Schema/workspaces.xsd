@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (C) 2016 Marc Weinmann, Florian Rusch,
+  ~                    Simon Rey, Alexander Zwetzich
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <!-- XML Schema Generated from XML Document on Fri Dec 09 2016 16:08:39 GMT+0100 (CET) -->
+    <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+    <xs:element name="workspaces">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="workspace" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="label">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="de" type="xs:string"></xs:element>
+                                        <xs:element name="en" type="xs:string"></xs:element>
+                                        <xs:element name="es" type="xs:string"></xs:element>
+                                        <xs:element name="fr" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="costs">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="firstStint" type="xs:double"></xs:element>
+                                        <xs:element name="secondStint" type="xs:double"></xs:element>
+                                        <xs:element name="thirdStint" type="xs:double"></xs:element>
+                                        <xs:element name="extraHour" type="xs:double"></xs:element>
+                                        <xs:element name="maschine">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="variable" type="xs:double"></xs:element>
+                                                    <xs:element name="fix" type="xs:double"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:int"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

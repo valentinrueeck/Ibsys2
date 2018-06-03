@@ -1,0 +1,110 @@
+﻿<Window x:Class="PPS_TOOL_DELUXE.Utility.Erzeugnisverwaltung"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        mc:Ignorable="d"
+        Name="ErzeugnisverwaltungWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="Erzeugnisverwaltung" Height="400" Width="620" DataContext="{Binding Produces, Source={StaticResource Locator}}">
+    <Grid>
+        <Label Content="Erzeugnisverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
+        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="btn_Zurück" Content="Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
+                CommandParameter="{Binding ElementName=ErzeugnisverwaltungWindow}"/>
+        <Button x:Name="btn_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
+                FontSize="10" BorderBrush="#FFD1D1D1" IsEnabled="False" Click="btn_bearbeiten_Click"/>
+        <DataGrid x:Name="producesGrid"
+            AutoGenerateColumns="false"
+            Margin="20,70,20,20"
+            ScrollViewer.CanContentScroll="True"
+            ScrollViewer.VerticalScrollBarVisibility="Auto"
+            ItemsSource="{Binding Produces}"
+            SelectedItem="{Binding SelectedProduce, Mode=TwoWay}"
+                  IsReadOnly="True" SelectionMode="Single" SelectionChanged="producesGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr.">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="20" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding label.de}" ClipboardContentBinding="{x:Null}"
+                    Header="Bezeichnung">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="120" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding startAmount}" ClipboardContentBinding="{x:Null}"
+                    Header="Anfangsbestand">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="100" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding value}" ClipboardContentBinding="{x:Null}"
+                    Header="Wert">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="70" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn Header="Arbeitsplätze">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="120" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl DisplayMemberPath="id" ItemsSource="{Binding timePerWorkplace}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Unterkomponenten">
+                    <DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="FontSize" Value="8pt" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Width" Value="120" />
+                        </Style>
+                    </DataGridTemplateColumn.HeaderStyle>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl DisplayMemberPath="id" ItemsSource="{Binding subComponentList}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

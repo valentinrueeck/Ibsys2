@@ -1,0 +1,115 @@
+﻿<Window x:Name="Schritt2" x:Class="PPS_TOOL_DELUXE.UI.Step2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        xmlns:glob="clr-namespace:System.Globalization;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Schritt 2" Height="400" Width="620"
+        WindowStartupLocation="CenterScreen"
+        DataContext="{Binding Step2, Source={StaticResource Locator}}" ContentRendered="Schritt2_ContentRendered">
+    <Window.Resources>
+        <Style TargetType="{x:Type ProgressBar}">
+            <Style.Resources>
+                <Style x:Key="NormalDot" TargetType="{x:Type Ellipse}">
+                    <Setter Property="Margin" Value="4" />
+                    <Setter Property="Width" Value="25" />
+                    <Setter Property="Height" Value="25" />
+                    <Setter Property="Fill" Value="LightGray" />
+                </Style>
+                <Style x:Key="ProgressDot" BasedOn="{StaticResource NormalDot}"
+                       TargetType="{x:Type Ellipse}">
+                    <Setter Property="Fill" Value="Orange" />
+                </Style>
+            </Style.Resources>
+            <Setter Property="Background" Value="#FFF8F9FB" />
+            <Setter Property="Height" Value="18" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <StackPanel x:Name="PART_Track" Orientation="Horizontal"
+                                        HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Ellipse Style="{StaticResource NormalDot}" />
+                                <Ellipse Style="{StaticResource NormalDot}" />
+                                <Ellipse Style="{StaticResource NormalDot}" />
+                                <Ellipse Style="{StaticResource NormalDot}" />
+                                <Ellipse Style="{StaticResource NormalDot}" />
+                            </StackPanel>
+
+                            <StackPanel x:Name="PART_Indicator" Orientation="Horizontal"
+                                        HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Ellipse Style="{StaticResource ProgressDot}" />
+                                <Ellipse Style="{StaticResource ProgressDot}" />
+                                <Ellipse Style="{StaticResource ProgressDot}" />
+                                <Ellipse Style="{StaticResource ProgressDot}" />
+                                <Ellipse Style="{StaticResource ProgressDot}" />
+                            </StackPanel>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Width="85"
+               FontSize="14" FontWeight="Bold" />
+        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0"
+               FontStyle="Italic" />
+        <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="60" Margin="20,30,0,0" Click="Button_Click" FontSize="10" Background="#FFE8E8E8"
+                BorderBrush="Gainsboro" />
+        <Button x:Name="Schritt2_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top"
+                Width="60" Margin="0,30,20,0" RenderTransformOrigin="2.333,0.75" FontSize="10" Background="#FFEAE5E5"
+                BorderBrush="LightGray" Command="{Binding NextCommand}"/>
+        <ProgressBar HorizontalAlignment="Center" Height="10" Margin="0,65,0,0" VerticalAlignment="Top" Width="165"
+                     Value="40" />
+        <DataGrid x:Name="producesGrid"
+                  AutoGenerateColumns="false"
+                  HorizontalAlignment="Center"
+                  Height="260"
+                  Margin="20,80,19.667,20"
+                  VerticalAlignment="Center"
+                  Width="575"
+                  ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ItemsSource="{Binding AllItemsInTheTable}"
+                  SelectionMode="Single">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="FontSize" Value="8pt" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="Width" Value="Auto" />
+                    <Setter Property="SeparatorBrush" Value="LightGray" />
+                    <Setter Property="SeparatorVisibility" Value="Visible" />
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}" Margin="5,0" TextWrapping="Wrap" Width="Auto" MaxWidth="90" TextAlignment="Center" IsHyphenationEnabled="True" Language="de-DE"/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" ClipboardContentBinding="{x:Null}"
+                                    Header="Nr."/>
+                <DataGridTextColumn Binding="{Binding plannedAmount}" ClipboardContentBinding="{x:Null}"
+                                    Header="Planbestand" />
+                <DataGridTextColumn Binding="{Binding safetyStock}" ClipboardContentBinding="{x:Null}"
+                                    Header="Sicherheitsbestand" />
+                <DataGridTextColumn Binding="{Binding stockPreviousPeriod}" ClipboardContentBinding="{x:Null}"
+                                    Header="Bestand Vorperiode" />
+                <DataGridTextColumn Binding="{Binding ordersInQueue}" ClipboardContentBinding="{x:Null}"
+                                    Header="Aufträge Warteliste" />
+                <DataGridTextColumn Binding="{Binding ordersInProcess}" ClipboardContentBinding="{x:Null}"
+                                    Header="Aufträge Bearbeitung" />
+                <DataGridTextColumn Binding="{Binding productionOrder}" ClipboardContentBinding="{x:Null}"
+                                    Header="Anzahl Fertigungsaufträge" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

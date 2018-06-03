@@ -1,0 +1,114 @@
+﻿<Window x:Name="ErzeugnisBearbeitenWindow" x:Class="PPS_TOOL_DELUXE.Utility.ErzeugnisBearbeiten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Erzeugnis bearbeiten" Height="430" Width="360"  DataContext="{Binding Produces, Source={StaticResource Locator}}" d:DataContext="{Binding Produces, Source={StaticResource Locator}}">
+    <Grid>
+        <Label Content="Erzeugnis bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
+        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,80,0,0" RenderTransformOrigin="0.393,0.423"/>
+        <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,105,0,0"/>
+        <Label Content="Französ. Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0"/>
+        <Label Content="Anfangsbestand*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,155,0,0"/>
+        <Label Content="Wert*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,180,0,0"/>
+        <TextBox x:Name="TextBox_D_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,80,20,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedProduce.label.de}"/>
+        <TextBox x:Name="TextBox_E_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="177,105,20,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedProduce.label.en}"/>
+        <TextBox x:Name="TextBox_S_Bezeichnung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="177,130,20,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedProduce.label.fr}"/>
+        <TextBox x:Name="TextBox_2_Schicht" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="177,180,20,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedProduce.value}"/>
+        <TextBox x:Name="Textbox_1_Schicht" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="177,155,20,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedProduce.startAmount}"/>
+        <Button x:Name="Schritt4_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
+                CommandParameter="{Binding ElementName=ErzeugnisBearbeitenWindow}"/>
+        <Button x:Name="Schritt4_weiter" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
+                FontSize="10" BorderBrush="#FFD1D1D1" Click="btn_speichern_Click"/>
+        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,205,0,0" FontStyle="Italic" FontSize="10"/>
+        <Label Content="Durchlaufene Arbeitsplätze*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,227,0,0" RenderTransformOrigin="0.667,7.308" FontSize="10"/>
+        <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="20,360,0,0" FontSize="10" BorderBrush="#FFD4CCCC" RenderTransformOrigin="6.244,4.962" Click="btn_plus_Click"/>
+        <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="138,360,0,0" FontSize="10" BorderBrush="#FFD4CCCC" RenderTransformOrigin="1.667,0.588" IsEnabled="False" Click="btn_minus_Click"/>
+        <Label Content="Subkomponente*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="198,228,0,0" RenderTransformOrigin="0.667,7.308" FontSize="10"/>
+        <Button x:Name="btn_plus_Subkomponente" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="198,360,0,0" FontSize="10" BorderBrush="#FFD4CCCC" RenderTransformOrigin="-0.333,1.176" Click="btn_plus_Subkomponente_Click"/>
+        <Button x:Name="btn_minus_Subkomponente" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="318,360,0,0" FontSize="10" BorderBrush="#FFD4CCCC" RenderTransformOrigin="1.667,0.588" IsEnabled="False" Click="btn_minus_Subkomponente_Click"/>
+        <DataGrid x:Name="produceWorkspacesGrid" HorizontalAlignment="Left" Height="100" Margin="20,255,0,0" VerticalAlignment="Top" Width="135" ItemsSource="{Binding SelectedProduce.timePerWorkplace, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Hidden" SelectionChanged="produceWorkspacesGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" SelectedItem="{Binding SelectedProduceWorkspace, Mode=TwoWay}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr." >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="30"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding setUpTime}" ClipboardContentBinding="{x:Null}" Header="Rüstzeit" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="50"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding time}" ClipboardContentBinding="{x:Null}" Header="Zeit" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="55"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="produceComponentGrid" HorizontalAlignment="Right" Height="100" Margin="181,255,20,0" VerticalAlignment="Top" Width="135" ItemsSource="{Binding SelectedProduce.subComponentList, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Hidden" SelectionChanged="produceComponentGrid_SelectionChanged" IsReadOnly="True" SelectionMode="Single" SelectedItem="{Binding SelectedProduceSubcomponent, Mode=TwoWay}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr." >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="30"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding typ}" ClipboardContentBinding="{x:Null}" Header="Typ" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="30"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding need}" ClipboardContentBinding="{x:Null}" Header="Anzahl" >
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="LightBlue"/>
+                            <Setter Property="FontSize" Value="8pt"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Width" Value="50"/>
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

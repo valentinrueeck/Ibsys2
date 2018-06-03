@@ -1,0 +1,29 @@
+﻿<Window x:Name="SubKomponenteHinzufuegenWindow" x:Class="PPS_TOOL_DELUXE.Utility.SubkomponenteHinzufügen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+       Title="Subkomponente hinzufügen" Height="140" Width="320" DataContext="{Binding Produces, Source={StaticResource Locator}}">
+    <Window.Resources>
+        <CollectionViewSource x:Key="ProducesViewSource" Source="{Binding Produces.Produces, Source={StaticResource Locator}}"/>
+        <CollectionViewSource x:Key="PurchasesViewSource" Source="{Binding Purchases.Purchases, Source={StaticResource Locator}}"/>
+
+        <CompositeCollection x:Key="CombinedCollection">
+            <CollectionContainer Collection="{Binding Source={StaticResource ProducesViewSource}}" />
+            <CollectionContainer Collection="{Binding Source={StaticResource PurchasesViewSource}}" />
+        </CompositeCollection>
+    </Window.Resources>
+    <Grid Margin="0,0,3,4.667">
+        <Label Content="Subkomponente:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" FontSize="10"/>
+        <Label Content="Anzahl:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,60,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5"/>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,85,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5"/>
+        <ComboBox Name="Drop_Down_Arbeitsplatz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="110,27,0,0" FontSize="10" Background="White" BorderBrush="White" ItemsSource="{StaticResource CombinedCollection}" DisplayMemberPath="id" SelectedValue="{Binding NewProduceSubcomponent.id, Mode=TwoWay}" SelectedValuePath="id"/>
+        <Button Name="btn_abbrechen" Content="Abbrechen" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,27,20,0" Height="16" FontSize="10" BorderBrush="LightGray" Click="btn_abbrechen_Click"/>
+        <Button Name="btn_hinzufügen" Content="Hinzufügen" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,60,20,0" RenderTransformOrigin="0.5,0.5" Height="16" FontSize="10" Background="LightBlue" BorderBrush="LightBlue" Command="{Binding AddComponentCommand}" Click="btn_hinzufügen_Click"/>
+        <TextBox x:Name="Textbox_Rüstzeit" HorizontalAlignment="Left" Height="13" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" Margin="110,65,0,0" FontSize="10" Text="{Binding NewProduceSubcomponent.need, Mode=TwoWay}"/>
+    </Grid>
+</Window>
+

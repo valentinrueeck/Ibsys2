@@ -1,0 +1,47 @@
+﻿<Window x:Name="KaufteilBearbeitenWindow" x:Class="PPS_TOOL_DELUXE.Utility.KaufteilBearbeiten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+         Title="Kaufteil bearbeiten" Height="360" Width="400" ResizeMode="NoResize" DataContext="{Binding Purchases, Source={StaticResource Locator}}">
+    <Grid>
+        <Label Content="Kaufteil bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
+        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,80,0,0" RenderTransformOrigin="0.393,0.423"/>
+        <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,105,0,0"/>
+        <Label Content="Französ. Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,130,0,0"/>
+        <Label Content="Anfangsbestand*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,155,0,0"/>
+        <Label Content="Discount Menge*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,180,0,0"/>
+        <Label Content="Lieferzeit*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,205,0,0"/>
+        <Label Content="Lieferzeit Abweichung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,230,0,0"/>
+        <Label Content="Bestellkosten*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,255,0,0"/>
+        <Label Content="Preis*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,280,0,0"/>
+        <TextBox x:Name="TextBox_D_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,80,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.label.de}"/>
+        <TextBox x:Name="TextBox_E_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,105,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.label.en}"/>
+        <TextBox x:Name="TextBox_S_Bezeichnung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,130,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.label.fr}"/>
+        <TextBox x:Name="TextBox_Discount" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,180,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.discountAmount}"/>
+        <TextBox x:Name="TextBox_Anfangsbestand" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,155,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.startAmount}"/>
+        <TextBox x:Name="TextBox_Lieferzeit" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,205,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.deliveryTime}"/>
+        <TextBox x:Name="TextBox_Lieferzeit_Ab" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,230,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.deliveryTimeVariance}"/>
+        <TextBox x:Name="TextBox_Bestellkosten" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,255,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.orderCosts}"/>
+        <TextBox x:Name="TextBox_Preis" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,280,40,0"
+                 BorderBrush="LightBlue" Text="{Binding SelectedPurchase.price}"/>
+        <Button x:Name="btn_zurück" Content="Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
+                CommandParameter="{Binding ElementName=KaufteilBearbeitenWindow}"/>
+        <Button x:Name="btn_speichern" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
+                FontSize="10" BorderBrush="#FFD1D1D1" Click="btn_speichern_Click"/>
+        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5" FontStyle="Italic" FontSize="10"/>
+
+    </Grid>
+</Window>

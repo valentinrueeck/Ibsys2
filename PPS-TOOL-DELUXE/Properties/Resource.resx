@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="anErrorHasOccurred" xml:space="preserve">
+    <value>Ein Fehler ist aufgetretten_</value>
+  </data>
+  <data name="mandatoryFields" xml:space="preserve">
+    <value>* Pflichtfelder</value>
+  </data>
+  <data name="validation_emptyFields" xml:space="preserve">
+    <value>Bitte füllen Sie jedes mit einem * markiertes Feld aus_</value>
+  </data>
+  <data name="success_saved" xml:space="preserve">
+    <value>Gespeichert!</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="error_view_IOException" xml:space="preserve">
+    <value>Beim Laden der nächsten Ansicht ist ein Fehler aufgetreten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_view_noTranslation" xml:space="preserve">
+    <value>Fehler beim Laden einer Übersetzung_</value>
+  </data>
+  <data name="dashboard_headline" xml:space="preserve">
+    <value>Die letzten Perioden</value>
+  </data>
+  <data name="dashboard_tvNoPeriodsImported" xml:space="preserve">
+    <value>Keine Perioden importiert</value>
+  </data>
+  <data name="dashboard_tcPeriod" xml:space="preserve">
+    <value>Periode</value>
+  </data>
+  <data name="dashboard_tcEfficiency" xml:space="preserve">
+    <value>Effizenz</value>
+  </data>
+  <data name="dashboard_tcWorkload" xml:space="preserve">
+    <value>Auslastung</value>
+  </data>
+  <data name="dashboard_tcProfit" xml:space="preserve">
+    <value>Gewinn</value>
+  </data>
+  <data name="dashboard_btnImportPeriod" xml:space="preserve">
+    <value>Periode importieren</value>
+  </data>
+  <data name="dashboard_btnNewPeriod" xml:space="preserve">
+    <value>Neue Periode planen</value>
+  </data>
+  <data name="dashboard_masterdata_headline" xml:space="preserve">
+    <value>Stammdatenverwaltung</value>
+  </data>
+  <data name="dashboard_masterdata_btn_workplaces" xml:space="preserve">
+    <value>Arbeitsplätze</value>
+  </data>
+  <data name="dashboard_masterdata_btn_purchaseItems" xml:space="preserve">
+    <value>Kaufteile</value>
+  </data>
+  <data name="dashboard_masterdata_btn_produceItems" xml:space="preserve">
+    <value>Erzeugnisse</value>
+  </data>
+  <data name="dashboard_success" xml:space="preserve">
+    <value>Erfolgreich</value>
+  </data>
+  <data name="dashboard_success_import" xml:space="preserve">
+    <value>Periode wurde erfolgreich importiert_</value>
+  </data>
+  <data name="error_dashboard_import_copy" xml:space="preserve">
+    <value>Datei wurde fehlerhaft kopiert_</value>
+  </data>
+  <data name="error_dashboard_import_JAXBException" xml:space="preserve">
+    <value>Die zu importierende Datei ist nicht valide_</value>
+  </data>
+  <data name="error_dashboard_import_alreadyExists" xml:space="preserve">
+    <value>Eine Periode mit der gleichen ID existiert bereits_</value>
+  </data>
+  <data name="error_dashboard_periodResults_equalPeriodNumber" xml:space="preserve">
+    <value>Es wurden mind_ zwei Perioden mit der gleichen Nummer gefunden_ Bitte korrigieren Sie die XML_Dateien in dem 'periods_results' Verzeichnis_</value>
+  </data>
+  <data name="error_dashboard_periodResults_fileDeleted" xml:space="preserve">
+    <value>Eine Periode wurde gelöscht, während darauf zugegriffen werden sollte_ Bitte kontaktieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_dashboard_periodResults_folderPermissions" xml:space="preserve">
+    <value>Es gab ein Problem_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_dashboard_periodResults_JAXBException" xml:space="preserve">
+    <value>Beim Laden der Perioden_Daten ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_step_three_invalidInput" xml:space="preserve">
+    <value>Ihre Eingabe ist unvollständig_ Bitte füllen Sie die entsprechend zugehörigen Werte_</value>
+  </data>
+  <data name="breadcrumb_capacity_planning" xml:space="preserve">
+    <value>Kapazitätsplan</value>
+  </data>
+  <data name="breadcrumb_construction_orders" xml:space="preserve">
+    <value>Fertigungsaufträge</value>
+  </data>
+  <data name="breadcrumb_export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="breadcrumb_prediction" xml:space="preserve">
+    <value>Prognose</value>
+  </data>
+  <data name="breadcrumb_quantitative_planning" xml:space="preserve">
+    <value>Mengenplanung</value>
+  </data>
+  <data name="breadcrumb_purchase_planning" xml:space="preserve">
+    <value>Kaufteildisposition</value>
+  </data>
+  <data name="step_first_labSellWishAndPrediction" xml:space="preserve">
+    <value>Verkaufswunsch und Vorhersage</value>
+  </data>
+  <data name="step_first_labPenalty" xml:space="preserve">
+    <value>Strafe</value>
+  </data>
+  <data name="step_first_labPrediction1" xml:space="preserve">
+    <value>Vorhersage 1</value>
+  </data>
+  <data name="step_first_labPrediction2" xml:space="preserve">
+    <value>Vorhersage 2</value>
+  </data>
+  <data name="step_first_labPrediction3" xml:space="preserve">
+    <value>Vorhersage 3</value>
+  </data>
+  <data name="step_first_labPrice" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="step_first_labQuantity" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="step_first_labSellWish" xml:space="preserve">
+    <value>Verkaufswunsch</value>
+  </data>
+  <data name="step_first_validation_emptyFields" xml:space="preserve">
+    <value>Bitte füllen Sie alle Felder aus_</value>
+  </data>
+  <data name="step_first_directSell" xml:space="preserve">
+    <value>Direktverkauf</value>
+  </data>
+  <data name="step_second_itemNumber" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="step_second_plannedAmount" xml:space="preserve">
+    <value>Planbestand</value>
+  </data>
+  <data name="step_second_saveStock" xml:space="preserve">
+    <value>Sicherheits_
+bestand</value>
+  </data>
+  <data name="step_second_stockFromPeriodBefore" xml:space="preserve">
+    <value>Bestand 
+Vorperiode</value>
+  </data>
+  <data name="step_second_ordersInWaitinglist" xml:space="preserve">
+    <value>Aufträge 
+Warteliste</value>
+  </data>
+  <data name="step_second_ordersInProcess" xml:space="preserve">
+    <value>Aufträge 
+Bearbeitung</value>
+  </data>
+  <data name="step_second_amountOfProductionOrders" xml:space="preserve">
+    <value>Anzahl 
+Fertigungs_
+aufträge</value>
+  </data>
+  <data name="step_third_itemNumber" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="step_third_currentAmount" xml:space="preserve">
+    <value>Aktueller
+Bestand</value>
+  </data>
+  <data name="step_third_consumption" xml:space="preserve">
+    <value>Verbrauch</value>
+  </data>
+  <data name="step_third_latestArrivalDate" xml:space="preserve">
+    <value>Längste
+Liefer_
+dauer</value>
+  </data>
+  <data name="step_third_quantity" xml:space="preserve">
+    <value>Diskont_
+menge</value>
+  </data>
+  <data name="step_third_orderQuantity" xml:space="preserve">
+    <value>Bestell_
+menge</value>
+  </data>
+  <data name="step_third_typeOfOrder" xml:space="preserve">
+    <value>Bestellart</value>
+  </data>
+  <data name="step_third_normalArrivalDate" xml:space="preserve">
+    <value>Normale
+Liefer_
+dauer</value>
+  </data>
+  <data name="step_third_hurryUpArrivalDate" xml:space="preserve">
+    <value>Liefer_
+dauer
+Eil</value>
+  </data>
+  <data name="step_third_openOrders" xml:space="preserve">
+    <value>Offene
+Bestellungen</value>
+  </data>
+  <data name="step_third_combobox_express" xml:space="preserve">
+    <value>Eil</value>
+  </data>
+  <data name="step_third_combobox_normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="step_four_id" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="step_four_count" xml:space="preserve">
+    <value>Anzahl</value>
+  </data>
+  <data name="step_five_neededCapacityLastPeriod" xml:space="preserve">
+    <value>Kapa
+Vorp_</value>
+  </data>
+  <data name="step_five_neededCapacityNew" xml:space="preserve">
+    <value>Kapa
+Neu</value>
+  </data>
+  <data name="step_five_setUpTimeLastPeriod" xml:space="preserve">
+    <value>Rüstzeit
+Vorp_</value>
+  </data>
+  <data name="step_five_overtime" xml:space="preserve">
+    <value>Überstunden
+(Minuten/Tag)</value>
+  </data>
+  <data name="step_five_setUpTimeNew" xml:space="preserve">
+    <value>Rüstzeit
+Neu</value>
+  </data>
+  <data name="step_five_total" xml:space="preserve">
+    <value>Gesamt_
+bedarf</value>
+  </data>
+  <data name="step_five_shifts" xml:space="preserve">
+    <value>Schichten</value>
+  </data>
+  <data name="step_five_workplace" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="step_five_label" xml:space="preserve">
+    <value>Bezeichnnung</value>
+  </data>
+  <data name="sixth_step_backToDashboard" xml:space="preserve">
+    <value>Zurück zum Dashboard</value>
+  </data>
+  <data name="sixth_step_fileName" xml:space="preserve">
+    <value>input</value>
+  </data>
+  <data name="workplaces_headline" xml:space="preserve">
+    <value>Arbeitsplatzverwaltung</value>
+  </data>
+  <data name="workplaces_editWorkplace" xml:space="preserve">
+    <value>Arbeitsplatz bearbeiten</value>
+  </data>
+  <data name="workplaces_id" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="workplaces_list_label" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="workplaces_list_firstStint" xml:space="preserve">
+    <value>1_ Schicht
+€/Min</value>
+  </data>
+  <data name="workplaces_list_secondStint" xml:space="preserve">
+    <value>2_ Schicht
+€/Min</value>
+  </data>
+  <data name="workplaces_list_thirdStint" xml:space="preserve">
+    <value>3_ Schicht
+€/Min</value>
+  </data>
+  <data name="workplaces_list_extraHour" xml:space="preserve">
+    <value>Überstunden
+€/Min</value>
+  </data>
+  <data name="workplaces_list_machineCosts_fix" xml:space="preserve">
+    <value>Maschinenkosten
+fix</value>
+  </data>
+  <data name="workplaces_list_machineCosts_var" xml:space="preserve">
+    <value>Maschinenkosten
+var</value>
+  </data>
+  <data name="workplaces_edit_label_de" xml:space="preserve">
+    <value>Deutsche Bezeichnung*</value>
+  </data>
+  <data name="workplaces_edit_label_en" xml:space="preserve">
+    <value>Englische Bezeichnung*</value>
+  </data>
+  <data name="workplaces_edit_label_es" xml:space="preserve">
+    <value>Spanische Bezeichnung*</value>
+  </data>
+  <data name="workplaces_edit_label_fr" xml:space="preserve">
+    <value>Französische Bezeichnung*</value>
+  </data>
+  <data name="workplaces_edit_firstStint" xml:space="preserve">
+    <value>1_ Schicht* (€/Min)</value>
+  </data>
+  <data name="workplaces_edit_secondStint" xml:space="preserve">
+    <value>2_ Schicht* (€/Min)</value>
+  </data>
+  <data name="workplaces_edit_thirdStint" xml:space="preserve">
+    <value>3_ Schicht* (€/Min)</value>
+  </data>
+  <data name="workplaces_edit_extraHour" xml:space="preserve">
+    <value>Überstunden* (€/Min)</value>
+  </data>
+  <data name="workplaces_edit_machineCosts_var" xml:space="preserve">
+    <value>Maschinenkosten var*</value>
+  </data>
+  <data name="workplaces_edit_machineCosts_fix" xml:space="preserve">
+    <value>Maschinenkosten fix*</value>
+  </data>
+  <data name="success_masterdata_workplaces_saved" xml:space="preserve">
+    <value>Arbeitsplatz wurde erfolgreich gespeichert_</value>
+  </data>
+  <data name="error_masterdata_workplaces_jaxb" xml:space="preserve">
+    <value>Beim Laden der Arbeitsplätze ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_workplaces_filenotfound" xml:space="preserve">
+    <value>Beim Laden der Arbeitsplätze ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_workplaces_sax" xml:space="preserve">
+    <value>Die XML_Datei der Arbeitsplätze ist nicht valide_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="purchaseItems_headline" xml:space="preserve">
+    <value>Kaufteilverwaltung</value>
+  </data>
+  <data name="purchaseItems_editPurchaseItems" xml:space="preserve">
+    <value>Kaufteil bearbeiten</value>
+  </data>
+  <data name="purchaseItems_id" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="purchaseItems_list_label" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="purchaseItems_list_startAmount" xml:space="preserve">
+    <value>Anfangs_
+bestand</value>
+  </data>
+  <data name="purchaseItems_list_discountAmount" xml:space="preserve">
+    <value>Discount
+Menge</value>
+  </data>
+  <data name="purchaseItems_list_deliveryTime" xml:space="preserve">
+    <value>Lieferzeit</value>
+  </data>
+  <data name="purchaseItems_list_deliverTimeVariance" xml:space="preserve">
+    <value>Lieferzeit
+Abweichung</value>
+  </data>
+  <data name="purchaseItems_list_orderCosts" xml:space="preserve">
+    <value>Bestell_
+kosten</value>
+  </data>
+  <data name="purchaseItems_list_price" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="purchaseItems_edit_label_de" xml:space="preserve">
+    <value>Deutsche Bezeichnung*</value>
+  </data>
+  <data name="purchaseItems_edit_label_en" xml:space="preserve">
+    <value>Englische Bezeichnung*</value>
+  </data>
+  <data name="purchaseItems_edit_label_es" xml:space="preserve">
+    <value>Spanische Bezeichnung*</value>
+  </data>
+  <data name="purchaseItems_edit_label_fr" xml:space="preserve">
+    <value>Französische Bezeichnung*</value>
+  </data>
+  <data name="purchaseItems_edit_startAmount" xml:space="preserve">
+    <value>Anfangsbestand*</value>
+  </data>
+  <data name="purchaseItems_edit_discountAmount" xml:space="preserve">
+    <value>Discount Menge*</value>
+  </data>
+  <data name="purchaseItems_edit_deliveryTime" xml:space="preserve">
+    <value>Lieferzeit*</value>
+  </data>
+  <data name="purchaseItems_edit_deliverTimeVariance" xml:space="preserve">
+    <value>Lieferzeit Abweichung*</value>
+  </data>
+  <data name="purchaseItems_edit_orderCosts" xml:space="preserve">
+    <value>Bestellkosten*</value>
+  </data>
+  <data name="purchaseItems_edit_price" xml:space="preserve">
+    <value>Preis*</value>
+  </data>
+  <data name="success_masterdata_purchaseItems_saved" xml:space="preserve">
+    <value>Kaufteil wurde erfolgreich gespeichert_</value>
+  </data>
+  <data name="error_masterdata_purchaseItems_jaxb" xml:space="preserve">
+    <value>Beim Laden der Kaufteile ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_purchaseItems_filenotfound" xml:space="preserve">
+    <value>Beim Laden der Kaufteile ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_purchaseItems_sax" xml:space="preserve">
+    <value>Die XML_Datei der Kaufteile ist nicht valide_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="produceItems_headline" xml:space="preserve">
+    <value>Erzeugnisverwaltung</value>
+  </data>
+  <data name="produceItems_editProduceItems" xml:space="preserve">
+    <value>Erzeugnis bearbeiten</value>
+  </data>
+  <data name="produceItems_dialog_workplace" xml:space="preserve">
+    <value>Arbeitsplatz hinzufügen</value>
+  </data>
+  <data name="produceItems_dialog_subComponent" xml:space="preserve">
+    <value>Subkomponente hinzufügen</value>
+  </data>
+  <data name="produceItems_dialog_confirm" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="produceItems_id" xml:space="preserve">
+    <value>Nr_</value>
+  </data>
+  <data name="produceItems_list_label" xml:space="preserve">
+    <value>Bezeichnung</value>
+  </data>
+  <data name="produceItems_list_startAmount" xml:space="preserve">
+    <value>Anfangs_
+bestand</value>
+  </data>
+  <data name="produceItems_list_value" xml:space="preserve">
+    <value>Wert</value>
+  </data>
+  <data name="produceItems_list_workplaces" xml:space="preserve">
+    <value>Durchlaufende
+Arbeitsplätze</value>
+  </data>
+  <data name="produceItems_list_subComponents" xml:space="preserve">
+    <value>Subkomponenten</value>
+  </data>
+  <data name="produceItems_edit_label_de" xml:space="preserve">
+    <value>Deutsche Bezeichnung*</value>
+  </data>
+  <data name="produceItems_edit_label_en" xml:space="preserve">
+    <value>Englische Bezeichnung*</value>
+  </data>
+  <data name="produceItems_edit_label_es" xml:space="preserve">
+    <value>Spanische Bezeichnung*</value>
+  </data>
+  <data name="produceItems_edit_label_fr" xml:space="preserve">
+    <value>Französische Bezeichnung*</value>
+  </data>
+  <data name="produceItems_edit_startAmount" xml:space="preserve">
+    <value>Anfangsbestand*</value>
+  </data>
+  <data name="produceItems_edit_value" xml:space="preserve">
+    <value>Wert*</value>
+  </data>
+  <data name="produceItems_edit_workplaces" xml:space="preserve">
+    <value>Durchlaufende Arbeitsplätze*</value>
+  </data>
+  <data name="produceItems_edit_workplace" xml:space="preserve">
+    <value>Arbeitsplatz</value>
+  </data>
+  <data name="produceItems_edit_time" xml:space="preserve">
+    <value>Fertigungszeit</value>
+  </data>
+  <data name="produceItems_edit_setUpTime" xml:space="preserve">
+    <value>Rüstzeit</value>
+  </data>
+  <data name="produceItems_edit_timePerWorkplace" xml:space="preserve">
+    <value>Benötigte Zeit</value>
+  </data>
+  <data name="produceItems_edit_subComponents" xml:space="preserve">
+    <value>Subkomponenten*</value>
+  </data>
+  <data name="produceItems_edit_subComponent" xml:space="preserve">
+    <value>Subkomponente</value>
+  </data>
+  <data name="produceItems_edit_subComponents_type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="produceItems_edit_subComponents_need" xml:space="preserve">
+    <value>Anzahl</value>
+  </data>
+  <data name="success_masterdata_produceItems_saved" xml:space="preserve">
+    <value>Erzeugnis wurde erfolgreich gespeichert_</value>
+  </data>
+  <data name="error_masterdata_produceItems_jaxb" xml:space="preserve">
+    <value>Beim Laden der Erzeugnisse ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_produceItems_filenotfound" xml:space="preserve">
+    <value>Beim Laden der Erzeugnisse ist ein Fehler aufgetretten_ Bitte informieren Sie Ihren Administrator_</value>
+  </data>
+  <data name="error_masterdata_produceItems_sax" xml:space="preserve">
+    <value>Die XML_Datei der Erzeugnisse ist nicht valide. Bitte informieren Sie Ihren Administrator.</value>
+  </data>
+</root>
