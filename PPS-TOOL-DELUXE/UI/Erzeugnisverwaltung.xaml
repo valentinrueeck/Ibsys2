@@ -10,7 +10,7 @@
         Title="Erzeugnisverwaltung" Height="400" Width="620" DataContext="{Binding Produces, Source={StaticResource Locator}}">
     <Grid>
         <Label Content="Erzeugnisverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
-        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
         <Button x:Name="btn_Zurück" Content="Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
                 CommandParameter="{Binding ElementName=ErzeugnisverwaltungWindow}"/>
         <Button x:Name="btn_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
