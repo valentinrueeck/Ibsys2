@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -283,7 +284,8 @@ namespace PPS_TOOL_DELUXE.ViewModel
             {
                 if (!string.IsNullOrEmpty(t))
                 {
-                    String[] order = t.Split(':');
+                    var orderlist = ReplaceLineFeed(t);
+                    String[] order = orderlist.Split(':');
                     arrivalOrderTime = Double.Parse(order[0]) - rLastPeriod.period;
                     double threshold = 0.8;
                     arrivalOrderTime = Math.Round(arrivalOrderTime - threshold + 0.5);
@@ -370,6 +372,27 @@ namespace PPS_TOOL_DELUXE.ViewModel
                 }
             });
             exportModel.orderList = Purchaseorders;
+        }
+
+        private string ReplaceLineFeed(string hasLineFeed)
+        {
+            if (string.IsNullOrEmpty(hasLineFeed))
+                return hasLineFeed;
+
+            StringBuilder result = new StringBuilder(hasLineFeed.Length);
+            foreach (char c in hasLineFeed)
+            {
+                if (c == '\n')
+                {
+                    if (result.Length > 0)
+                        result.Length--;
+                }
+                else
+                {
+                    result.Append(c);
+                }
+            }
+            return result.ToString();
         }
     }
 }
