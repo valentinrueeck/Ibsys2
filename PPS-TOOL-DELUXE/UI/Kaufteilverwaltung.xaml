@@ -9,12 +9,9 @@
         DataContext="{Binding Purchases, Source={StaticResource Locator}}"
       Title="Kaufteilverwaltung" Height="400" Width="620" ResizeMode="NoResize" d:DataContext="{Binding Purchases, Source={StaticResource Locator}}">
     <Grid>
-        <Label Content="Kaufteilverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic" RenderTransformOrigin="0.833,0.577"/>
-        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="btn_Arbeitsplatzverwaltung_zurück" Content="Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
-                CommandParameter="{Binding ElementName=KaufteileverwaltungWindow}"/>
+        <Label Content="Kaufteilverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,286.667,0" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.833,0.577" Width="308"/>
         <Button x:Name="btn_Kaufteilverwaltung_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
-                FontSize="10" BorderBrush="#FFD1D1D1" IsEnabled="False" Click="btn_Kaufteilverwaltung_bearbeiten_Click"/>
+                FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" IsEnabled="False" Click="btn_Kaufteilverwaltung_bearbeiten_Click"/>
         <DataGrid x:Name="purchasesGrid"
             AutoGenerateColumns="false"
             HorizontalAlignment="Left"
@@ -29,7 +26,7 @@
                 <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr.">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -41,7 +38,7 @@
                     Header="Bezeichnung">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -53,7 +50,7 @@
                     Header="Anfangsbestand">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -65,7 +62,7 @@
                     Header="Discountmenge">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -77,7 +74,7 @@
                     Header="Lieferzeit">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -89,7 +86,7 @@
                     Header="Lieferzeit&#xA;Abweichung">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -101,7 +98,7 @@
                     Header="Bestellkosten">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -113,7 +110,7 @@
                     Header="Preis">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
