@@ -38,7 +38,7 @@
                  BorderBrush="DarkGoldenrod" Text="{Binding SelectedPurchase.price}"/>
         <Button x:Name="btn_speichern" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,294,38.667,0"
                 FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" Click="btn_speichern_Click"/>
-        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="41,0,288.667,21" FontStyle="Italic" FontSize="10"/>
+        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="41,0,269.667,21" FontStyle="Italic" FontSize="10" Width="84"/>
 
     </Grid>
 </Window>

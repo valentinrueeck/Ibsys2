@@ -52,7 +52,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Label Content="Kaufteildisposition" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,498.667,0" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Kaufteildisposition" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,367.667,0" FontSize="18" FontWeight="Bold" Width="301"/>
+        <Button x:Name="Schritt3_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,21,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Click="Schritt3_abbrechen_Click" Height="24"/>
         <Button x:Name="Schritt3_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,21,9.667,0" FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="24"/>
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"

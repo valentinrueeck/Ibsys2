@@ -57,8 +57,11 @@
             <RowDefinition Height="156*"/>
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
-        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,373.333,0"
-               FontSize="18" FontWeight="Bold" Width="222"/>
+        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,311.333,0"
+               FontSize="18" FontWeight="Bold" Width="284"/>
+        <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="60" Margin="460,30,0,0" Click="Button_Click" FontSize="10" Background="#FFE8E8E8"
+                BorderBrush="Gainsboro" Height="22" />
         <Button x:Name="Schritt2_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top"
                 Width="60" Margin="0,30,20.333,0" RenderTransformOrigin="2.333,0.75" FontSize="10"
                 BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="22"/>
