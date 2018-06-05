@@ -8,22 +8,24 @@
         x:Class="PPS_TOOL_DELUXE.UI.Dashboard"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MegaPPS" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" Icon="/PPS-TOOL-DELUXE;component/Ressource/iconTool.png" ResizeMode="NoResize">
+        Title="MegaPPS" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" Icon="/PPS-TOOL-DELUXE;component/Ressource/iconTool.png" ResizeMode="NoResize" Background="#2e3641">
     <Grid>
-        <Label x:Name="LabPage" Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="19,10,319.667,0" FontSize="26" FontWeight="Bold" Width="216"/>
-        <Button x:Name="BtnImport" Content="{x:Static p:Resource.dashboard_btnImportPeriod}" VerticalAlignment="Top" Margin="303,37,0,0" FontSize="10" BorderBrush="#FFD4CCCC" HorizontalAlignment="Left" Click="btn_Periode_importieren_Click"/>
+        <Label x:Name="LabPage" Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="19,10,319.667,0" FontSize="26" FontWeight="Bold" Width="216" Foreground="#e9f0f4"/>
+        <Button x:Name="BtnImport" Content="{x:Static p:Resource.dashboard_btnImportPeriod}" VerticalAlignment="Top" Margin="303,37,0,0" FontSize="10" HorizontalAlignment="Left" Click="btn_Periode_importieren_Click" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"/>
         <Button x:Name="BtnPlan" 
                 Content="{x:Static p:Resource.dashboard_btnNewPeriod}" 
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Top" 
                 Margin="0,37,49.667,0"
                 FontSize="10" 
-                BorderBrush="#FFD1D1D1" 
+                BorderBrush="#16a085"
+                Background="#16a085"
+                Foreground="#e9f0f4"
                 IsEnabled="{Binding CanPlan}" RenderTransformOrigin="0.531,3.183" Click="btn_Periode_planen_Click"/>
-        <Label x:Name="LabMasterAdmin" Content="{x:Static p:Resource.dashboard_masterdata_headline}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,240,0,40"/>
-        <Button x:Name="BtnWorkplaces" Content="{x:Static p:Resource.dashboard_masterdata_btn_workplaces}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="142,0,301.667,20" FontSize="10" BorderBrush="#FFD4CCCC" Width="75" RenderTransformOrigin="0.844,0.442" Click="btn_Arbeitsplätze_Click"/>
-        <Button x:Name="BtnProduces" Content="{x:Static p:Resource.dashboard_masterdata_btn_produceItems}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="0,0,0,20" FontSize="10" BorderBrush="#FFD4CCCC" Click="btn_Erzeugnisse_Click"/>
-        <Button x:Name="BtnPurchases" Content="{x:Static p:Resource.dashboard_masterdata_btn_purchaseItems}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="302,0,141.667,20" FontSize="10" BorderBrush="#FFD4CCCC" Click="btn_Kaufteile_Click"/>
+        <Label x:Name="LabMasterAdmin" Content="{x:Static p:Resource.dashboard_masterdata_headline}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,240,0,40" Foreground="#e9f0f4"/>
+        <Button x:Name="BtnWorkplaces" Content="{x:Static p:Resource.dashboard_masterdata_btn_workplaces}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="142,0,301.667,20" FontSize="10" BorderBrush="#16a085" Background="#2e3641" Foreground="#e9f0f4"  Width="75" RenderTransformOrigin="0.844,0.442" Click="btn_Arbeitsplätze_Click"/>
+        <Button x:Name="BtnProduces" Content="{x:Static p:Resource.dashboard_masterdata_btn_produceItems}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="0,0,0,20" FontSize="10" BorderBrush="#16a085" Background="#2e3641" Foreground="#e9f0f4" Click="btn_Erzeugnisse_Click"/>
+        <Button x:Name="BtnPurchases" Content="{x:Static p:Resource.dashboard_masterdata_btn_purchaseItems}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="75" Margin="302,0,141.667,20" FontSize="10" BorderBrush="#16a085" Background="#2e3641" Foreground="#e9f0f4" Click="btn_Kaufteile_Click"/>
         <Button x:Name="BtnGerman" Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="25" Margin="0,0,9.667,194" FontSize="10" BorderBrush="#FFD4CCCC" Click="BtnGerman_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/PPS-TOOL-DELUXE;component/Ressource/buttonGermany.png"/>
@@ -37,7 +39,8 @@
         <DataGrid x:Name="GridPeriods"  AutoGenerateColumns="False" Margin="22,66,49.667,80" ItemsSource="{Binding Periods}" IsReadOnly="True">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="Gold" />
+                    <Setter Property="Background" Value="#16a085" />
+                    <Setter Property="Foreground" Value="#e9f0f4" />
                     <Setter Property="FontSize" Value="8pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -66,7 +69,7 @@
                 <ImageBrush ImageSource="/PPS-TOOL-DELUXE;component/Ressource/buttonFrance.png"/>
             </Button.Background>
         </Button>
-        <Border BorderBrush="Black" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="66" Margin="150,0,150.667,9" VerticalAlignment="Bottom" Width="254" Padding="0"/>
+        <Border BorderBrush="#9eb2c0" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="66" Margin="150,0,150.667,9" VerticalAlignment="Bottom" Width="254" Padding="0"/>
 
     </Grid>
 </Window>

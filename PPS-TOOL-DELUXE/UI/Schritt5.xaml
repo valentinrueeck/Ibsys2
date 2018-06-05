@@ -51,10 +51,10 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid Margin="0,0,0.333,-2">
-        <Label Content="Kapazitätsplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,23,312,0" FontSize="18" FontWeight="Bold" Width="221"/>
+    <Grid Margin="0,0,0.333,-2" Background="#2e3641">
+        <Label Content="Kapazitätsplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,23,312,0" FontSize="18" FontWeight="Bold" Width="221" Foreground="#e9f0f4"/>
         <Button x:Name="Schritt5_export" Content="Export" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
-                FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="18"/>
+                FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" Command="{Binding NextCommand}" Height="18"/>
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"
             HorizontalAlignment="Left"
@@ -67,8 +67,8 @@
             IsReadOnly="False" SelectionMode="Single" ItemsSource="{Binding WorkplacesTimesNew}">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="Gold" />
-                    <Setter Property="FontSize" Value="8pt" />
+                    <Setter Property="Background" Value="#16a085" />
+                    <Setter Property="Foreground" Value="#e9f0f4" />                    <Setter Property="FontSize" Value="8pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
                     <Setter Property="Width" Value="Auto" />

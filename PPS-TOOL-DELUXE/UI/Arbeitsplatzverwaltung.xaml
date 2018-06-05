@@ -8,13 +8,13 @@
     mc:Ignorable="d"
     WindowStartupLocation="CenterScreen"
     DataContext="{Binding Workplaces, Source={StaticResource Locator}}"
-    Height="400" Width="570" MinWidth="570" MinHeight="400" ResizeMode="NoResize">
+    Height="400" Width="570" MinWidth="570" MinHeight="400" ResizeMode="NoResize" Background="#2e3641">
     <Grid>
         <Label Content="Arbeitsplatzverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,209.667,0"
-               FontWeight="Bold" FontSize="18" Width="335"/>
+               FontWeight="Bold" FontSize="18" Width="335" Foreground="#e9f0f4"/>
         <Button x:Name="btn_Arbeitsplatzverwaltung_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right"
                 VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
-                FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" IsEnabled="False"
+                FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" IsEnabled="False"
                 Click="btn_Arbeitsplatzverwaltung_bearbeiten_Click" />
         <DataGrid x:Name="workspacesGrid"
                   AutoGenerateColumns="false"
@@ -32,7 +32,8 @@
                 <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Id">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -44,7 +45,8 @@
                                     Header="Bezeichnung">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -56,7 +58,8 @@
                                     Header="1.Schicht&#xA; [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -68,7 +71,8 @@
                                     Header="2.Schicht&#xA; [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -80,7 +84,8 @@
                                     Header="3.Schicht&#xA; [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -92,7 +97,8 @@
                                     Header="Überstunden&#xA;   [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -104,7 +110,8 @@
                                     Header="Masch.kosten&#xA;fix [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -116,7 +123,8 @@
                                     Header="Masch.kosten&#xA;var [€/min]">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="Gold" />
+                            <Setter Property="Background" Value="#16a085" />
+                            <Setter Property="Foreground" Value="#e9f0f4" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />

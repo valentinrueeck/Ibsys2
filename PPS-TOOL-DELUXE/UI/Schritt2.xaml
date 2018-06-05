@@ -52,19 +52,19 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Background="#2e3641">
         <Grid.RowDefinitions>
             <RowDefinition Height="156*"/>
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
         <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,311.333,0"
-               FontSize="18" FontWeight="Bold" Width="284"/>
+               FontSize="18" FontWeight="Bold" Width="284" Foreground="#e9f0f4"/>
         <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="60" Margin="460,30,0,0" Click="Button_Click" FontSize="10" Background="#FFE8E8E8"
-                BorderBrush="Gainsboro" Height="22" />
+                Width="60" Margin="460,30,0,0" Click="Button_Click" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Height="22" />
         <Button x:Name="Schritt2_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top"
                 Width="60" Margin="0,30,20.333,0" RenderTransformOrigin="2.333,0.75" FontSize="10"
-                BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="22"/>
+                Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
+ Command="{Binding NextCommand}" Height="22"/>
         <DataGrid x:Name="producesGrid"
                   AutoGenerateColumns="false"
                   HorizontalAlignment="Center"
@@ -78,7 +78,8 @@
                   SelectionMode="Single" Grid.RowSpan="2">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="Gold" />
+                    <Setter Property="Background" Value="#16a085" />
+                    <Setter Property="Foreground" Value="#e9f0f4" />
                     <Setter Property="FontSize" Value="8pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
