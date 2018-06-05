@@ -53,7 +53,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Width="85"
+        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Width="85"
                FontSize="14" FontWeight="Bold" />
         <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0"
                FontStyle="Italic" />

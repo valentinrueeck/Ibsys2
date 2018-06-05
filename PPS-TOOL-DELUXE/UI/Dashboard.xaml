@@ -8,7 +8,7 @@
         x:Class="PPS_TOOL_DELUXE.UI.Dashboard"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="OptiPPS" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" Icon="/PPS-TOOL-DELUXE;component/Ressource/iconTool.png" ResizeMode="NoResize">
+        Title="MegaPPS" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" Icon="/PPS-TOOL-DELUXE;component/Ressource/iconTool.png" ResizeMode="NoResize">
     <Grid>
         <Label x:Name="LabDetail"  Content="{x:Static p:Resource.dashboard_headline}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
         <Label x:Name="LabPage" Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>

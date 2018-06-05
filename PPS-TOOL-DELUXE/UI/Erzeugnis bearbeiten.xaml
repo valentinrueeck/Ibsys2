@@ -9,7 +9,7 @@
         Title="Erzeugnis bearbeiten" Height="430" Width="360"  DataContext="{Binding Produces, Source={StaticResource Locator}}" d:DataContext="{Binding Produces, Source={StaticResource Locator}}">
     <Grid>
         <Label Content="Erzeugnis bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
-        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
         <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,80,0,0" RenderTransformOrigin="0.393,0.423"/>
         <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,105,0,0"/>
         <Label Content="Französ. Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,130,0,0"/>

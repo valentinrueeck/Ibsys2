@@ -11,7 +11,7 @@
         Title="Arbeitsplatz bearbeiten" Height="350" Width="540" MinWidth="540" MinHeight="350" ResizeMode="NoResize" DataContext="{Binding Workplaces, Source={StaticResource Locator}}">
     <Grid>
         <Label Content="Arbeitsplatz bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
-        <Label Content="OptiPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,16,0,0" FontSize="14" FontWeight="Bold"/>
+        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,16,0,0" FontSize="14" FontWeight="Bold"/>
         <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="78,78,0,0" RenderTransformOrigin="0.393,0.423"/>
         <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="78,101,0,0"/>
         <Label Content="Französische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,123,0,0"/>
