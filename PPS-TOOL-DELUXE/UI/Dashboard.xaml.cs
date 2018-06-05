@@ -46,6 +46,7 @@ namespace PPS_TOOL_DELUXE.UI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new CultureInfo("de");
             CommandManager.InvalidateRequerySuggested();
+            refreshPage();
         }
 
         private void BtnEnglish_Click(object sender, RoutedEventArgs e)
@@ -53,6 +54,8 @@ namespace PPS_TOOL_DELUXE.UI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new CultureInfo("en-GB");
             CommandManager.InvalidateRequerySuggested();
+            //refreshPage();
+            //_viewModel.FlagEnClick();
         }
 
         private void BtnFrench_Click(object sender, RoutedEventArgs e)
@@ -60,6 +63,14 @@ namespace PPS_TOOL_DELUXE.UI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new CultureInfo("fr-FR");
             CommandManager.InvalidateRequerySuggested();
+ 
+        }
+
+        private void refreshPage()
+        {
+            var window = new Dashboard();
+            window.Show();
+            Close();
         }
     }
 }

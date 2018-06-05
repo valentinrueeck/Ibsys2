@@ -94,8 +94,8 @@
         <TextBox x:Name="Direktverkauf_Vorhersage2_P2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="380,235,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.5,0.5" FontSize="9" IsEnabled="True" Height="14" Text="{Binding selldirect1fine}"/>
         <TextBox x:Name="Direktverkauf_Vorhersage2_P1" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="380,255,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.5,0.5" FontSize="9" IsEnabled="True" Height="14" Text="{Binding selldirect2fine}"/>
         <TextBox x:Name="Direktverkauf_Vorhersage2_P3" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="380,275,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.512,0.251" FontSize="9" IsEnabled="True" Height="14" Text="{Binding selldirect3fine}"/>
-        <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="20,30,0,0" Height="15" Click="Schritt2_Abbrechen_Click" FontSize="9" BorderBrush="#FFD3CDCD"/>
-        <Button x:Name="Schritt1_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Margin="0,30,20,0" Height="15" FontSize="9" BorderBrush="#FFCDCACA"
+        <Button x:Name="Schritt2_Abbrechen" Content="sdsd" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="20,30,0,0" Height="15" Click="Schritt2_Abbrechen_Click" FontSize="9" BorderBrush="#FFD3CDCD"/>
+        <Button x:Name="Schritt1_Weiter" Content="sddasad" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Margin="0,30,20,0" Height="15" FontSize="9" BorderBrush="#FFCDCACA"
                 Command="{Binding NextCommand}"/>
         <ProgressBar HorizontalAlignment="Center" Height="10" Margin="0,65,0,0" VerticalAlignment="Top" Width="165" Value="20"/>
     </Grid>

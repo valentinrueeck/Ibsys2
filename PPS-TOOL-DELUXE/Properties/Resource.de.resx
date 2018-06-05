@@ -175,7 +175,7 @@
     <value>Gewinn</value>
   </data>
   <data name="dashboard_btnImportPeriod" xml:space="preserve">
-    <value>Periode importieren</value>
+    <value>Alte Periode importieren</value>
   </data>
   <data name="dashboard_btnNewPeriod" xml:space="preserve">
     <value>Neue Periode planen</value>
