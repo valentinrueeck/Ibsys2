@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -57,21 +58,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="Vertriebswunsch" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="28,30,295.667,0" FontSize="18" FontWeight="Bold" Width="171" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labSellWish}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="28,30,295.667,0" FontSize="18" FontWeight="Bold" Width="171" Foreground="#e9f0f4"/>
         <Label Content="P1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,98,0,0" Height="20" FontSize="9" Foreground="#e9f0f4"/>
         <Label Content="P3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,138,0,0" RenderTransformOrigin="1.13,0.962" FontSize="9" Height="21" Foreground="#e9f0f4"/>
         <Label Content="P2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,118,0,0" RenderTransformOrigin="1.13,0.962" FontSize="9" Height="27" Foreground="#e9f0f4"/>
-        <Label Content="Vertriebswunsch" RenderTransformOrigin="0.618,-0.682" Margin="53,73,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Foreground="#e9f0f4"/>
-        <Label Content="Vorhersage1" RenderTransformOrigin="0.618,-0.682" Margin="110,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
-        <Label Content="Vorhersage2" RenderTransformOrigin="0.618,-0.682" Margin="210,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
-        <Label Content="Vorhersage3" RenderTransformOrigin="0.618,-0.682" Margin="310,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
-        <Label Content="Direktverkauf" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="190,30,149.667,0" FontSize="18" FontWeight="Bold" Width="155" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labSellWish}" RenderTransformOrigin="0.618,-0.682" Margin="53,73,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labPrediction1}" RenderTransformOrigin="0.618,-0.682" Margin="110,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labPrediction2}" RenderTransformOrigin="0.618,-0.682" Margin="210,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labPrediction3}" RenderTransformOrigin="0.618,-0.682" Margin="310,208,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_directSell}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="190,30,149.667,0" FontSize="18" FontWeight="Bold" Width="155" Foreground="#e9f0f4"/>
         <Label Content="P1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,99,0,0" Height="20" FontSize="9" Foreground="#e9f0f4"/>
         <Label Content="P3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,139,0,0" RenderTransformOrigin="1.13,0.962" FontSize="9" Height="21" Foreground="#e9f0f4"/>
         <Label Content="P2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="169,119,0,0" RenderTransformOrigin="1.13,0.962" FontSize="9" Height="27" Foreground="#e9f0f4"/>
-        <Label Content="Menge" RenderTransformOrigin="0.618,-0.682" Margin="215,72,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
-        <Label Content="Preis" RenderTransformOrigin="0.618,-0.682" Margin="317,72,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
-        <Label Content="Strafe" RenderTransformOrigin="0.618,-0.682" Margin="404,73,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labQuantity}" RenderTransformOrigin="0.618,-0.682" Margin="215,72,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labPrice}" RenderTransformOrigin="0.618,-0.682" Margin="317,72,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.step_first_labPenalty}" RenderTransformOrigin="0.618,-0.682" Margin="404,73,0,0" TextOptions.TextHintingMode="Fixed" FontStyle="Italic" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#e9f0f4"/>
         <TextBox x:Name="Verkaufswunsch_P1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="58,104,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.5,0.5" FontSize="9" IsEnabled="True" Height="14" Text="{Binding Sellwish1}" BorderBrush="#1abc9c"/>
         <TextBox x:Name="Verkaufswunsch_P2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="58,124,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.5,0.5" FontSize="9" IsEnabled="True" Height="14" Text="{Binding Sellwish2}" BorderBrush="#1abc9c"/>
         <TextBox x:Name="Verkaufswunsch_P3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="58,144,0,0" Width="80" Background="#FFF1F1F1" RenderTransformOrigin="0.512,0.251" FontSize="9" IsEnabled="True" Height="14" Text="{Binding Sellwish3}" BorderBrush="#1abc9c"/>
@@ -96,7 +97,7 @@
         <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="352,30,0,0" Height="22" Click="Schritt2_Abbrechen_Click" FontSize="9" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4"/>
         <Button x:Name="Schritt1_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Margin="0,30,19.667,0" Height="22" FontSize="9" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
                 Command="{Binding NextCommand}"/>
-        <Label Content="Vorhersage" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="199,174,124.667,0" FontSize="18" FontWeight="Bold" Width="171" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.breadcrumb_prediction}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="199,174,124.667,0" FontSize="18" FontWeight="Bold" Width="171" Foreground="#e9f0f4"/>
     </Grid>
 </Window>
 

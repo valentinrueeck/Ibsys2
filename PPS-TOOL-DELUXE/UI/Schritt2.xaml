@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         xmlns:glob="clr-namespace:System.Globalization;assembly=mscorlib"
         mc:Ignorable="d"
@@ -57,11 +58,11 @@
             <RowDefinition Height="156*"/>
             <RowDefinition Height="29*"/>
         </Grid.RowDefinitions>
-        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,311.333,0"
+        <Label Content="{x:Static p:Resource.breadcrumb_quantitative_planning}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,311.333,0"
                FontSize="18" FontWeight="Bold" Width="284" Foreground="#e9f0f4"/>
-        <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top"
+        <Button x:Name="Schritt2_Abbrechen" Content="{x:Static p:Resource.cancel}" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="60" Margin="460,30,0,0" Click="Button_Click" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Height="22" />
-        <Button x:Name="Schritt2_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top"
+        <Button x:Name="Schritt2_Weiter" Content="{x:Static p:Resource.next}" HorizontalAlignment="Right" VerticalAlignment="Top"
                 Width="60" Margin="0,30,20.333,0" RenderTransformOrigin="2.333,0.75" FontSize="10"
                 Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
  Command="{Binding NextCommand}" Height="22"/>
@@ -97,19 +98,19 @@
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding ID}" ClipboardContentBinding="{x:Null}"
-                                    Header="Nr."/>
+                                    Header="{x:Static p:Resource.step_second_itemNumber}"/>
                 <DataGridTextColumn Binding="{Binding plannedAmount}" ClipboardContentBinding="{x:Null}"
-                                    Header="Planbestand" />
+                                    Header="{x:Static p:Resource.step_second_plannedAmount}" />
                 <DataGridTextColumn Binding="{Binding safetyStock}" ClipboardContentBinding="{x:Null}"
-                                    Header="Sicherheitsbestand" />
+                                    Header="{x:Static p:Resource.step_second_saveStock}" />
                 <DataGridTextColumn Binding="{Binding stockPreviousPeriod}" ClipboardContentBinding="{x:Null}"
-                                    Header="Bestand Vorperiode" />
+                                    Header="{x:Static p:Resource.step_second_stockFromPeriodBefore}" />
                 <DataGridTextColumn Binding="{Binding ordersInQueue}" ClipboardContentBinding="{x:Null}"
-                                    Header="Aufträge Warteliste" />
+                                    Header="{x:Static p:Resource.step_second_ordersInWaitinglist}" />
                 <DataGridTextColumn Binding="{Binding ordersInProcess}" ClipboardContentBinding="{x:Null}"
-                                    Header="Aufträge Bearbeitung" />
+                                    Header="{x:Static p:Resource.step_second_ordersInProcess}" />
                 <DataGridTextColumn Binding="{Binding productionOrder}" ClipboardContentBinding="{x:Null}"
-                                    Header="Anzahl Fertigungsaufträge" />
+                                    Header="{x:Static p:Resource.step_second_amountOfProductionOrders}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

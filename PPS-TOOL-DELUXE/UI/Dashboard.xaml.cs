@@ -54,7 +54,7 @@ namespace PPS_TOOL_DELUXE.UI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new CultureInfo("en-GB");
             CommandManager.InvalidateRequerySuggested();
-            //refreshPage();
+            refreshPage();
             //_viewModel.FlagEnClick();
         }
 
@@ -63,7 +63,7 @@ namespace PPS_TOOL_DELUXE.UI
             System.Threading.Thread.CurrentThread.CurrentUICulture =
                 new CultureInfo("fr-FR");
             CommandManager.InvalidateRequerySuggested();
- 
+            refreshPage();
         }
 
         private void refreshPage()

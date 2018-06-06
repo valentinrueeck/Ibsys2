@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         Title="Schritt 3" Height="400" Width="685"
@@ -52,9 +53,9 @@
         </Style>
     </Window.Resources>
     <Grid Background="#2e3641">
-        <Label Content="Kaufteildisposition" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,367.667,0" FontSize="18" FontWeight="Bold" Width="301" Foreground="#e9f0f4"/>
-        <Button x:Name="Schritt3_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,21,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Click="Schritt3_abbrechen_Click" Height="24"/>
-        <Button x:Name="Schritt3_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,21,9.667,0" FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
+        <Label Content="{x:Static p:Resource.breadcrumb_purchase_planning}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,367.667,0" FontSize="18" FontWeight="Bold" Width="301" Foreground="#e9f0f4"/>
+        <Button x:Name="Schritt3_abbrechen" Content="{x:Static p:Resource.cancel}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,21,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Click="Schritt3_abbrechen_Click" Height="24"/>
+        <Button x:Name="Schritt3_weiter" Content="{x:Static p:Resource.next}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,21,9.667,0" FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
  Command="{Binding NextCommand}" Height="24"/>
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"
@@ -88,9 +89,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Number}" ClipboardContentBinding="{x:Null}" Header="Nr." IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding StockValue}" ClipboardContentBinding="{x:Null}"
-                    Header="Aktueller Bestand" />
+                    Header="{x:Static p:Resource.step_third_currentAmount}" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T0}" ClipboardContentBinding="{x:Null}"
-                    Header="Verbrauch P" />
+                    Header="{x:Static p:Resource.step_third_consumption}" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T1}" ClipboardContentBinding="{x:Null}"
                     Header="Verbrauch P+1" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T2}" ClipboardContentBinding="{x:Null}"
