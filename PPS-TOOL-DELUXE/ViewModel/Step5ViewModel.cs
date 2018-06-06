@@ -24,12 +24,15 @@ namespace PPS_TOOL_DELUXE.ViewModel
 
         private results rLastPeriod;
         private ExportModel exportModel;
-
+        private ObservableCollection<WorkplaceTimeModel> workplacesTimesNew;
         private List<Production> productionList;
         private List<produceItemsItem> produceItemProductionList;
         private List<workspacesWorkspace> workspaces;
         private List<produceItemsItem> produceItems;
-        public ObservableCollection<WorkplaceTimeModel> WorkplacesTimesNew { get; set; }
+        public ObservableCollection<WorkplaceTimeModel> WorkplacesTimesNew {
+            get { return workplacesTimesNew; }
+            set { this.workplacesTimesNew = value; RaisePropertyChanged("WorkplacesTimesNew"); }
+        }
         public ObservableCollection<int> LayersList { get; } = new ObservableCollection<int> {1, 2, 3};
 
         public Step5ViewModel()

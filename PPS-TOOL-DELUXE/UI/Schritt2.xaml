@@ -53,32 +53,32 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Width="85"
-               FontSize="14" FontWeight="Bold" />
-        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0"
-               FontStyle="Italic" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="156*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Mengenplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="18,21,311.333,0"
+               FontSize="18" FontWeight="Bold" Width="284"/>
         <Button x:Name="Schritt2_Abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top"
-                Width="60" Margin="20,30,0,0" Click="Button_Click" FontSize="10" Background="#FFE8E8E8"
-                BorderBrush="Gainsboro" />
+                Width="60" Margin="460,30,0,0" Click="Button_Click" FontSize="10" Background="#FFE8E8E8"
+                BorderBrush="Gainsboro" Height="22" />
         <Button x:Name="Schritt2_Weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top"
-                Width="60" Margin="0,30,20,0" RenderTransformOrigin="2.333,0.75" FontSize="10" Background="#FFEAE5E5"
-                BorderBrush="LightGray" Command="{Binding NextCommand}"/>
-        <ProgressBar HorizontalAlignment="Center" Height="10" Margin="0,65,0,0" VerticalAlignment="Top" Width="165"
-                     Value="40" />
+                Width="60" Margin="0,30,20.333,0" RenderTransformOrigin="2.333,0.75" FontSize="10"
+                BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="22"/>
         <DataGrid x:Name="producesGrid"
                   AutoGenerateColumns="false"
                   HorizontalAlignment="Center"
-                  Height="260"
-                  Margin="20,80,19.667,20"
+                  Height="277"
+                  Margin="18,69,20.333,24.667"
                   VerticalAlignment="Center"
                   Width="575"
                   ScrollViewer.CanContentScroll="True"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   ItemsSource="{Binding AllItemsInTheTable}"
-                  SelectionMode="Single">
+                  SelectionMode="Single" Grid.RowSpan="2">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Background" Value="Gold" />
                     <Setter Property="FontSize" Value="8pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />

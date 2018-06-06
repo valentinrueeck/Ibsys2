@@ -9,12 +9,9 @@
         WindowStartupLocation="CenterScreen"
         Title="Erzeugnisverwaltung" Height="400" Width="620" DataContext="{Binding Produces, Source={StaticResource Locator}}">
     <Grid>
-        <Label Content="Erzeugnisverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
-        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="btn_Zurück" Content="Zurück" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Command="{Binding CloseWindowCommand, Mode=OneWay}"
-                CommandParameter="{Binding ElementName=ErzeugnisverwaltungWindow}"/>
+        <Label Content="Erzeugnisverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,310.333,0" FontSize="18" FontWeight="Bold" Width="283"/>
         <Button x:Name="btn_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
-                FontSize="10" BorderBrush="#FFD1D1D1" IsEnabled="False" Click="btn_bearbeiten_Click"/>
+                FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" IsEnabled="False" Click="btn_bearbeiten_Click"/>
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"
             Margin="20,70,20,20"
@@ -27,7 +24,7 @@
                 <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr.">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -39,7 +36,7 @@
                     Header="Bezeichnung">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -51,7 +48,7 @@
                     Header="Anfangsbestand">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -63,7 +60,7 @@
                     Header="Wert">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -74,7 +71,7 @@
                 <DataGridTemplateColumn Header="Arbeitsplätze">
                     <DataGridTemplateColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -90,7 +87,7 @@
                 <DataGridTemplateColumn Header="Unterkomponenten">
                     <DataGridTemplateColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
-                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Background" Value="Gold" />
                             <Setter Property="FontSize" Value="8pt" />
                             <Setter Property="FontWeight" Value="Bold" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />

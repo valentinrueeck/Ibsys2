@@ -54,14 +54,12 @@
     <Grid x:Name="layoutRoot"
         MouseLeftButtonUp="OnMouseLeftButtonUp"
         MouseMove="OnMouseMove">
-        <Label Content="Fertigungsaufträge" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,38,0,0" FontStyle="Italic"/>
-        <Label Content="MegaPPS" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="0,15,0,0" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="Schritt4_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,30,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Click="Schritt4_abbrechen_Click"/>
-        <Button x:Name="Schritt4_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0" FontSize="10" BorderBrush="#FFD1D1D1" Command="{Binding NextCommand}" />
-        <ProgressBar HorizontalAlignment="Center" Height="10" Margin="0,65,0,0" VerticalAlignment="Top" Width="165" Value="80"/>
+        <Label Content="Fertigungsaufträge" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="21,20,110.667,0" FontSize="18" FontWeight="Bold" Width="187"/>
+        <Button x:Name="Schritt4_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="226,45,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Click="Schritt4_abbrechen_Click" Height="22"/>
+        <Button x:Name="Schritt4_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,18,9.667,0" FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="22" />
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"
-            Margin="49,80,48.667,45.333"
+            Margin="51,76,46.667,49.333"
             Width="221"
             ScrollViewer.CanContentScroll="True"
             ScrollViewer.VerticalScrollBarVisibility="Auto"
@@ -71,7 +69,7 @@
             PreviewMouseLeftButtonDown="OnMouseLeftButtonDown" SelectionChanged="producesGrid_SelectionChanged" SelectedItem="{Binding SelectedRow}">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Background" Value="Gold" />
                     <Setter Property="FontSize" Value="8pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -129,7 +127,7 @@
                 </StackPanel>
             </Border>
         </Popup>
-        <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,30,15" FontSize="10" BorderBrush="#FFD1D1D1" Command="{Binding AddRowCommand}" Width="17" Height="17" />
-        <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30,0,0,15" FontSize="10" BorderBrush="#FFD1D1D1" Command="{Binding DeleteRowCommand}" Width="17" Height="17" IsEnabled="False" />
+        <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="137,0,164.667,24.333" FontSize="10" BorderBrush="#FFD1D1D1" Command="{Binding AddRowCommand}" Width="17" Height="17" />
+        <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="167,0,134.667,24.333" FontSize="10" BorderBrush="#FFD1D1D1" Command="{Binding DeleteRowCommand}" Width="17" Height="17" IsEnabled="False" />
     </Grid>
 </Window>
