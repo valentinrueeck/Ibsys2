@@ -51,10 +51,11 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <Label Content="Kaufteildisposition" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,367.667,0" FontSize="18" FontWeight="Bold" Width="301"/>
-        <Button x:Name="Schritt3_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,21,0,0" FontSize="10" BorderBrush="#FFD4CCCC" Click="Schritt3_abbrechen_Click" Height="24"/>
-        <Button x:Name="Schritt3_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,21,9.667,0" FontSize="10" BorderBrush="DarkGoldenrod" Background="Gold" Command="{Binding NextCommand}" Height="24"/>
+    <Grid Background="#2e3641">
+        <Label Content="Kaufteildisposition" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,12,367.667,0" FontSize="18" FontWeight="Bold" Width="301" Foreground="#e9f0f4"/>
+        <Button x:Name="Schritt3_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="505,21,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Click="Schritt3_abbrechen_Click" Height="24"/>
+        <Button x:Name="Schritt3_weiter" Content="Weiter" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,21,9.667,0" FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
+ Command="{Binding NextCommand}" Height="24"/>
         <DataGrid x:Name="producesGrid"
             AutoGenerateColumns="false"
             HorizontalAlignment="Left"
@@ -67,7 +68,8 @@
             ItemsSource="{Binding PurchaseModels}" SelectionMode="Single">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="Gold" />
+                    <Setter Property="Background" Value="#16a085" />
+                    <Setter Property="Foreground" Value="#e9f0f4" />
                     <Setter Property="FontSize" Value="6pt" />
                     <Setter Property="FontWeight" Value="Bold" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
