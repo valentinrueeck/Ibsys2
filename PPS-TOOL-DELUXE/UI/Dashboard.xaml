@@ -8,7 +8,7 @@
         x:Class="PPS_TOOL_DELUXE.UI.Dashboard"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MegaPPS" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" Icon="/PPS-TOOL-DELUXE;component/Ressource/iconTool.png" ResizeMode="NoResize" Background="#2e3641">
+        Title="DRV-Systems" DataContext="{Binding Dashboard, Source={StaticResource Locator}}" Height="350" Width="560" MinWidth="560" MinHeight="300" ResizeMode="NoResize" Background="#2e3641">
     <Grid>
         <Label x:Name="LabPage" Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="3.158,0.577" Margin="19,10,319.667,0" FontSize="26" FontWeight="Bold" Width="216" Foreground="#e9f0f4"/>
         <Button x:Name="BtnImport" Content="{x:Static p:Resource.dashboard_btnImportPeriod}" VerticalAlignment="Top" Margin="303,37,0,0" FontSize="10" HorizontalAlignment="Left" Click="btn_Periode_importieren_Click" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"/>
