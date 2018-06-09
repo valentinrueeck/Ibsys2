@@ -93,25 +93,25 @@
                 <DataGridTextColumn Binding="{Binding Timemodel.T0}" ClipboardContentBinding="{x:Null}"
                     Header="{x:Static p:Resource.step_third_consumption}" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T1}" ClipboardContentBinding="{x:Null}"
-                    Header="Verbrauch P+1" />
+                    Header="P+1" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T2}" ClipboardContentBinding="{x:Null}"
-                    Header="Verbrauch P+2" />
+                    Header="P+2" />
                 <DataGridTextColumn Binding="{Binding Timemodel.T3}" ClipboardContentBinding="{x:Null}"
-                    Header="Verbrauch P+3" />
+                    Header="P+3" />
                 <DataGridTextColumn Binding="{Binding OpenOrders}" ClipboardContentBinding="{x:Null}"
-                    Header="Offene Bestellungen" MaxWidth="60" />
+                    Header="{x:Static p:Resource.step_third_openOrders}" MaxWidth="60" />
                 <DataGridTextColumn Binding="{Binding NormalDeliveryDate}" ClipboardContentBinding="{x:Null}"
-                                    Header="Normale Lieferdauer"/>
+                                    Header="{x:Static p:Resource.step_third_normalArrivalDate}"/>
                 <DataGridTextColumn Binding="{Binding LatestDeliveryDate}" ClipboardContentBinding="{x:Null}"
-                                    Header="Längste Lieferdauer"/>
+                                    Header="{x:Static p:Resource.step_third_latestArrivalDate}"/>
                 <DataGridTextColumn Binding="{Binding HurryUpDeliveryDate}" ClipboardContentBinding="{x:Null}"
-                                    Header="Eil Lieferdauer"/>
+                                    Header="{x:Static p:Resource.step_third_hurryUpArrivalDate}"/>
                 <DataGridTextColumn Binding="{Binding DiscountAmount}" ClipboardContentBinding="{x:Null}"
-                                    Header="Diskontmenge"/>
+                                    Header="{x:Static p:Resource.step_third_quantity}"/>
                 <DataGridTextColumn Binding="{Binding PurchaseAmount}" ClipboardContentBinding="{x:Null}"
-                                    Header="Bestellmenge"/>
+                                    Header="{x:Static p:Resource.step_third_orderQuantity}"/>
                 <DataGridTemplateColumn ClipboardContentBinding="{x:Null}"
-                                    Header="Bestellart">
+                                    Header="{x:Static p:Resource.step_third_typeOfOrder}">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <ComboBox ItemsSource="{Binding Step3.KindOfDeliveryOptions, Source={StaticResource Locator}}" SelectedItem="{Binding KindOfDelivery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>

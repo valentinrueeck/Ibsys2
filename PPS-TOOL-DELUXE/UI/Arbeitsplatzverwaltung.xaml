@@ -5,14 +5,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
     mc:Ignorable="d"
     WindowStartupLocation="CenterScreen"
     DataContext="{Binding Workplaces, Source={StaticResource Locator}}"
     Height="400" Width="570" MinWidth="570" MinHeight="400" ResizeMode="NoResize" Background="#2e3641">
     <Grid>
-        <Label Content="Arbeitsplatzverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,209.667,0"
+        <Label Content="{x:Static p:Resource.workplaces_headline}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,209.667,0"
                FontWeight="Bold" FontSize="18" Width="335" Foreground="#e9f0f4"/>
-        <Button x:Name="btn_Arbeitsplatzverwaltung_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right"
+        <Button x:Name="btn_Arbeitsplatzverwaltung_bearbeiten" Content="{x:Static p:Resource.edit}" HorizontalAlignment="Right"
                 VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" IsEnabled="False"
                 Click="btn_Arbeitsplatzverwaltung_bearbeiten_Click" />
@@ -42,7 +43,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding label.de}" ClipboardContentBinding="{x:Null}"
-                                    Header="Bezeichnung">
+                                    Header="{x:Static p:Resource.workplaces_list_label}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -55,7 +56,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.firstStint}" ClipboardContentBinding="{x:Null}"
-                                    Header="1.Schicht&#xA; [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_firstStint}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -68,7 +69,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.secondStint}" ClipboardContentBinding="{x:Null}"
-                                    Header="2.Schicht&#xA; [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_secondStint}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -81,7 +82,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.thirdStint}" ClipboardContentBinding="{x:Null}"
-                                    Header="3.Schicht&#xA; [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_thirdStint}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -94,7 +95,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.extraHour}" ClipboardContentBinding="{x:Null}"
-                                    Header="Überstunden&#xA;   [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_extraHour}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -107,7 +108,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.maschine.fix}" ClipboardContentBinding="{x:Null}"
-                                    Header="Masch.kosten&#xA;fix [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_machineCosts_fix}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -120,7 +121,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding costs.maschine.variable}" ClipboardContentBinding="{x:Null}"
-                                    Header="Masch.kosten&#xA;var [€/min]">
+                                    Header="{x:Static p:Resource.workplaces_list_machineCosts_var}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />

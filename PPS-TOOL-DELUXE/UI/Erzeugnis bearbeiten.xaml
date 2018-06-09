@@ -3,17 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Erzeugnis bearbeiten" Height="430" Width="360"  DataContext="{Binding Produces, Source={StaticResource Locator}}" d:DataContext="{Binding Produces, Source={StaticResource Locator}}" Background="#2e3641">
     <Grid>
-        <Label Content="Erzeugnis bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,95.333,0" FontSize="18" FontWeight="Bold" Width="238" Foreground="#e9f0f4"/>
-        <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,58,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
-        <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,83,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Französ. Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,108,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Anfangsbestand*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,133,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Wert*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,158,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_editProduceItems}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,95.333,0" FontSize="18" FontWeight="Bold" Width="238" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_label_de}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,58,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_label_en}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,83,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_label_fr}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,108,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_startAmount}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,133,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_value}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,158,0,0" Foreground="#e9f0f4"/>
         <TextBox x:Name="TextBox_D_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,58,19.333,0"
                  BorderBrush="#1abc9c" Text="{Binding SelectedProduce.label.de}"/>
         <TextBox x:Name="TextBox_E_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,83,19.333,0"
@@ -24,11 +25,11 @@
                  BorderBrush="#1abc9c" Text="{Binding SelectedProduce.value}"/>
         <TextBox x:Name="Textbox_1_Schicht" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,133,19.333,0"
                  BorderBrush="#1abc9c" Text="{Binding SelectedProduce.startAmount}"/>
-        <Button x:Name="Schritt4_weiter" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,367,20.333,0"
+        <Button x:Name="Schritt4_weiter" Content="{x:Static p:Resource.save}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,367,20.333,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
  Click="btn_speichern_Click"/>
-        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,182,232.333,0" FontStyle="Italic" FontSize="10" Width="101" Foreground="#e9f0f4"/>
-        <Label Content="Durchlaufene Arbeitsplätze*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,205,0,0" RenderTransformOrigin="0.667,7.308" FontSize="10" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.mandatoryFields}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,182,232.333,0" FontStyle="Italic" FontSize="10" Width="101" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_workplaces}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,205,0,0" RenderTransformOrigin="0.667,7.308" FontSize="10" Foreground="#e9f0f4"/>
         <Button x:Name="btn_plus" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="20,338,0,0" FontSize="10" Foreground="#e9f0f4" BorderBrush="#1abc9c" Background="#1abc9c" RenderTransformOrigin="6.244,4.962" Click="btn_plus_Click"/>
         <Button x:Name="btn_minus" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Margin="138,338,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" RenderTransformOrigin="1.667,0.588" IsEnabled="False" Click="btn_minus_Click"/>
         <Label Content="Subkomponente*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="198,206,0,0" RenderTransformOrigin="0.667,7.308" FontSize="10" Foreground="#e9f0f4"/>
@@ -48,7 +49,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding setUpTime}" ClipboardContentBinding="{x:Null}" Header="Rüstzeit" >
+                <DataGridTextColumn Binding="{Binding setUpTime}" ClipboardContentBinding="{x:Null}" Header="{x:Static p:Resource.produceItems_edit_setUpTime}" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085"/>
@@ -60,7 +61,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding time}" ClipboardContentBinding="{x:Null}" Header="Zeit" >
+                <DataGridTextColumn Binding="{Binding time}" ClipboardContentBinding="{x:Null}" Header="{x:Static p:Resource.produceItems_edit_timePerWorkplace}" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085"/>
@@ -88,7 +89,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding typ}" ClipboardContentBinding="{x:Null}" Header="Typ" >
+                <DataGridTextColumn Binding="{Binding typ}" ClipboardContentBinding="{x:Null}" Header="{x:Static p:Resource.produceItems_edit_subComponents}" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085"/>
@@ -100,7 +101,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding need}" ClipboardContentBinding="{x:Null}" Header="Anzahl" >
+                <DataGridTextColumn Binding="{Binding need}" ClipboardContentBinding="{x:Null}" Header="{x:Static p:Resource.produceItems_edit_subComponents_need}" >
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085"/>

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -13,12 +14,12 @@
             <ColumnDefinition Width="140"/>
             <ColumnDefinition Width="137*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Arbeitsplatz:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,25,0,0" FontSize="10" Height="23" Width="65" Foreground="#e9f0f4"/>
-        <Label Content="Rüstzeit:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,55,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5" Height="24" Width="48" Foreground="#e9f0f4"/>
-        <Label Content="Fertigungszeit:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,85,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5" Height="23" Width="75" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_workplace}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,25,0,0" FontSize="10" Height="23" Width="65" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_setUpTime}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,55,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5" Height="24" Width="48" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.produceItems_edit_time}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6,85,0,0" FontSize="10" RenderTransformOrigin="0.5,0.5" Height="23" Width="75" Foreground="#e9f0f4"/>
         <ComboBox Name="Drop_Down_Arbeitsplatz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="11,30,0,0" FontSize="10" Background="White" BorderBrush="White" Grid.Column="1" ItemsSource="{Binding Workplaces.Workspaces, Source={StaticResource Locator}}" DisplayMemberPath="id" SelectedValue="{Binding NewProduceWorkspace.id, Mode=TwoWay}" SelectedValuePath="id"/>
-        <Button Name="btn_abbrechen" Content="Abbrechen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,30,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Grid.Column="2" Click="btn_abbrechen_Click"/>
-        <Button Name="btn_hinzufügen" Content="Hinzufügen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,85,0,0" RenderTransformOrigin="0.5,0.5" FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" Grid.Column="2" Click="btn_hinzufügen_Click" Command="{Binding AddWorkspaceCommand}"/>
+        <Button Name="btn_abbrechen" Content="{x:Static p:Resource.cancel}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,30,0,0" FontSize="10" BorderBrush="#9eb2c0" Background="#9eb2c0" Foreground="#e9f0f4" Grid.Column="2" Click="btn_abbrechen_Click"/>
+        <Button Name="btn_hinzufügen" Content="{x:Static p:Resource.produceItems_dialog_confirm}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,85,0,0" RenderTransformOrigin="0.5,0.5" FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" Grid.Column="2" Click="btn_hinzufügen_Click" Command="{Binding AddWorkspaceCommand}"/>
         <TextBox x:Name="Textbox_Rüstzeit" HorizontalAlignment="Left" Height="13" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Margin="11,60,0,0" FontSize="10" Grid.Column="1" Text="{Binding NewProduceWorkspace.setUpTime}"/>
         <TextBox x:Name="Textbox_Fertigungszeit" HorizontalAlignment="Left" Height="13" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Margin="11,90,0,0" FontSize="10" Grid.Column="1" Text="{Binding NewProduceWorkspace.time}"/>
     </Grid>

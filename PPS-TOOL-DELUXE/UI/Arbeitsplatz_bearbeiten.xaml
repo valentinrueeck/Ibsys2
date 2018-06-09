@@ -4,22 +4,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         xmlns:ViewModel="clr-namespace:PPS_TOOL_DELUXE.ViewModel" x:Class="PPS_TOOL_DELUXE.UI.ArbeitsplatzBearbeiten"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Arbeitsplatz bearbeiten" Height="350" Width="540" MinWidth="540" MinHeight="350" ResizeMode="NoResize" DataContext="{Binding Workplaces, Source={StaticResource Locator}}" Background="#2e3641">
     <Grid>
-        <Label Content="Arbeitsplatz bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="58,18,99.667,0" FontSize="18" FontWeight="Bold" Width="377" Foreground="#e9f0f4"/>
-        <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,58,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
-        <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,81,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Französische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,103,0,0" Foreground="#e9f0f4"/>
-        <Label Content="1. Schicht* (€/Min)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,126,0,0" Foreground="#e9f0f4"/>
-        <Label Content="2. Schicht* (€/Min)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,148,0,0" Foreground="#e9f0f4"/>
-        <Label Content="3. Schicht* (€/Min)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,170,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Überstunden* (€/Min)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,193,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Maschinenkosten fix*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,216,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Maschinenkosten var*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,238,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_editWorkplace}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="58,18,99.667,0" FontSize="18" FontWeight="Bold" Width="377" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_label_de}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,58,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_label_en}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,81,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_label_fr}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,103,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_firstStint}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,126,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_secondStint}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,148,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_thirdStint}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,170,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_extraHour}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,193,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_machineCosts_fix}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,216,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.workplaces_edit_machineCosts_var}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,238,0,0" Foreground="#e9f0f4"/>
         <TextBox x:Name="TextBox_D_Bezeichung" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,60,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.label.de}"/>
         <TextBox x:Name="TextBox_E_Bezeichung" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,82,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.label.en}"/>
         <TextBox x:Name="TextBox_S_Bezeichnung" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,104,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.label.fr}"/>
@@ -29,10 +30,10 @@
         <TextBox x:Name="TextBox_Überstunden" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,195,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.costs.extraHour}"/>
         <TextBox x:Name="TextBox_MaschinenK_fix" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,218,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.costs.maschine.fix}"/>
         <TextBox x:Name="TextBox_MaschinenK_var" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="300,240,0,0" BorderBrush="#1abc9c" Text="{Binding SelectedWorkspace.costs.maschine.variable}"/>
-        <Button x:Name="btn_speichern" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,277,88.667,0"
+        <Button x:Name="btn_speichern" Content="{x:Static p:Resource.save}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,277,88.667,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
              Click="btn_speichern_Click"/>
-        <Label Content="Pflichtfelder*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,269,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.mandatoryFields}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,269,0,0" Foreground="#e9f0f4"/>
 
     </Grid>
 </Window>

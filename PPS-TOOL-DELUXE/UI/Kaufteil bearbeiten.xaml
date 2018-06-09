@@ -3,21 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
          Title="Kaufteil bearbeiten" Height="360" Width="400" ResizeMode="NoResize" DataContext="{Binding Purchases, Source={StaticResource Locator}}" Background="#2e3641">
     <Grid>
-        <Label Content="Kaufteil bearbeiten" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="23,18,132.667,0" FontSize="18" FontWeight="Bold" Width="239" Foreground="#e9f0f4"/>
-        <Label Content="Deutsche Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,57,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
-        <Label Content="Englische Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,82,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Französ. Bezeichnung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,107,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Anfangsbestand*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,132,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Discount Menge*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,157,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Lieferzeit*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,182,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Lieferzeit Abweichung*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,207,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Bestellkosten*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,232,0,0" Foreground="#e9f0f4"/>
-        <Label Content="Preis*" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,257,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_editPurchaseItems}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="23,18,132.667,0" FontSize="18" FontWeight="Bold" Width="239" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_label_de}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,57,0,0" RenderTransformOrigin="0.393,0.423" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_label_en}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,82,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_label_fr}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,107,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_startAmount}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,132,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_discountAmount}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,157,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_deliveryTime}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,182,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_deliverTimeVariance}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,207,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_orderCosts}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,232,0,0" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.purchaseItems_edit_price}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,257,0,0" Foreground="#e9f0f4"/>
         <TextBox x:Name="TextBox_D_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,57,38.667,0"
                  BorderBrush="#1abc9c" Text="{Binding SelectedPurchase.label.de}"/>
         <TextBox x:Name="TextBox_E_Bezeichung" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="0,82,38.667,0"
@@ -38,7 +39,7 @@
                  BorderBrush="#1abc9c" Text="{Binding SelectedPurchase.price}"/>
         <Button x:Name="btn_speichern" Content="Speichern" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,294,38.667,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" Click="btn_speichern_Click"/>
-        <Label Content="Pflichtfelder*" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="41,0,269.667,21" FontStyle="Italic" FontSize="10" Width="84" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.mandatoryFields}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="41,0,269.667,21" FontStyle="Italic" FontSize="10" Width="84" Foreground="#e9f0f4"/>
 
     </Grid>
 </Window>

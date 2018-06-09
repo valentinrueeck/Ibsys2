@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -52,7 +53,7 @@
         </Style>
     </Window.Resources>
     <Grid Margin="0,0,0.333,-2" Background="#2e3641">
-        <Label Content="Kapazitätsplanung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,23,312,0" FontSize="18" FontWeight="Bold" Width="221" Foreground="#e9f0f4"/>
+        <Label Content="{x:Static p:Resource.breadcrumb_capacity_planning}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,23,312,0" FontSize="18" FontWeight="Bold" Width="221" Foreground="#e9f0f4"/>
         <Button x:Name="Schritt5_export" Content="Export" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" Command="{Binding NextCommand}" Height="18"/>
         <DataGrid x:Name="producesGrid"
@@ -86,17 +87,17 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" ClipboardContentBinding="{x:Null}" Header="Nr." />
                 <DataGridTextColumn Binding="{Binding Label}" ClipboardContentBinding="{x:Null}"
-                    Header="Bezeichnung" />
+                    Header="{x:Static p:Resource.step_five_label}" />
                 <DataGridTextColumn Binding="{Binding SetUpNew}" ClipboardContentBinding="{x:Null}"
-                    Header="Rüstzeit Neu" />
+                    Header="{x:Static p:Resource.step_five_label}" />
                 <DataGridTextColumn Binding="{Binding KapaOld}" ClipboardContentBinding="{x:Null}"
-                    Header=" Kapazität&#xA;Vorperiode" />
+                    Header="{x:Static p:Resource.step_five_neededCapacityLastPeriod}" />
                 <DataGridTextColumn Binding="{Binding SetUpOld}" ClipboardContentBinding="{x:Null}"
-                    Header="  Rüstzeit&#xA;Vorperiode" />
+                    Header="{x:Static p:Resource.step_five_setUpTimeLastPeriod}" />
                 <DataGridTextColumn Binding="{Binding Total}" ClipboardContentBinding="{x:Null}"
-                    Header="Gesamtbedarf" />
+                    Header="{x:Static p:Resource.step_five_total}" />
                 <DataGridTemplateColumn ClipboardContentBinding="{x:Null}"
-                                        Header="Schichten" Width="4*">
+                                        Header="{x:Static p:Resource.step_five_shifts}" Width="4*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <ComboBox ItemsSource="{Binding Step5.LayersList, Source={StaticResource Locator}}" SelectedItem="{Binding Shifts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
@@ -104,7 +105,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTextColumn Binding="{Binding Overtime}" ClipboardContentBinding="{x:Null}"
-                                    Header="Überminuten" />
+                                    Header="{x:Static p:Resource.step_five_overtime}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

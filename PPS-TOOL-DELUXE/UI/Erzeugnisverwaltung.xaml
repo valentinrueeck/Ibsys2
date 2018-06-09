@@ -3,14 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         Name="ErzeugnisverwaltungWindow"
         WindowStartupLocation="CenterScreen"
         Title="Erzeugnisverwaltung" Height="400" Width="620" DataContext="{Binding Produces, Source={StaticResource Locator}}" Background="#2e3641">
     <Grid>
-        <Label Content="Erzeugnisverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,310.333,0" FontSize="18" FontWeight="Bold" Width="283" Foreground=" 	#e9f0f4"/>
-        <Button x:Name="btn_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
+        <Label Content="{x:Static p:Resource.produceItems_headline}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,310.333,0" FontSize="18" FontWeight="Bold" Width="283" Foreground=" 	#e9f0f4"/>
+        <Button x:Name="btn_bearbeiten" Content="{x:Static p:Resource.edit}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085"
                  IsEnabled="False" Click="btn_bearbeiten_Click"/>
         <DataGrid x:Name="producesGrid"
@@ -35,7 +36,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding label.de}" ClipboardContentBinding="{x:Null}"
-                    Header="Bezeichnung">
+                    Header="{x:Static p:Resource.produceItems_list_label}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -48,7 +49,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding startAmount}" ClipboardContentBinding="{x:Null}"
-                    Header="Anfangsbestand">
+                    Header="{x:Static p:Resource.produceItems_list_startAmount}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -61,7 +62,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding value}" ClipboardContentBinding="{x:Null}"
-                    Header="Wert">
+                    Header="{x:Static p:Resource.produceItems_list_value}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -73,7 +74,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTemplateColumn Header="Arbeitsplätze">
+                <DataGridTemplateColumn Header="{x:Static p:Resource.produceItems_list_workplaces}">
                     <DataGridTemplateColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -90,7 +91,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Unterkomponenten">
+                <DataGridTemplateColumn Header="{x:Static p:Resource.produceItems_list_subComponents}">
                     <DataGridTemplateColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />

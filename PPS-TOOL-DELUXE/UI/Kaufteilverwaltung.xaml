@@ -3,14 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:PPS_TOOL_DELUXE.Properties"
         xmlns:local="clr-namespace:PPS_TOOL_DELUXE"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         DataContext="{Binding Purchases, Source={StaticResource Locator}}"
       Title="Kaufteilverwaltung" Height="400" Width="620" ResizeMode="NoResize" d:DataContext="{Binding Purchases, Source={StaticResource Locator}}" Background="#2e3641">
     <Grid>
-        <Label Content="Kaufteilverwaltung" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,286.667,0" FontSize="18" FontWeight="Bold" Foreground="#e9f0f4" RenderTransformOrigin="0.833,0.577" Width="308"/>
-        <Button x:Name="btn_Kaufteilverwaltung_bearbeiten" Content="Bearbeiten" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
+        <Label Content="{x:Static p:Resource.purchaseItems_headline}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,18,286.667,0" FontSize="18" FontWeight="Bold" Foreground="#e9f0f4" RenderTransformOrigin="0.833,0.577" Width="308"/>
+        <Button x:Name="btn_Kaufteilverwaltung_bearbeiten" Content="{x:Static p:Resource.edit}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,30,20,0"
                 FontSize="10" Background="#16a085" Foreground="#e9f0f4" BorderBrush="#16a085" IsEnabled="False" Click="btn_Kaufteilverwaltung_bearbeiten_Click"/>
         <DataGrid x:Name="purchasesGrid"
             AutoGenerateColumns="false"
@@ -23,7 +24,7 @@
             ScrollViewer.VerticalScrollBarVisibility="Auto"
                   IsReadOnly="True" SelectionMode="Single" SelectionChanged="purchasesGrid_SelectionChanged" ItemsSource="{Binding Purchases}" SelectedItem="{Binding SelectedPurchase, Mode=TwoWay}">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="Nr.">
+                <DataGridTextColumn Binding="{Binding id}" ClipboardContentBinding="{x:Null}" Header="{x:Static p:Resource.purchaseItems_id}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -36,7 +37,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding label.de}" ClipboardContentBinding="{x:Null}"
-                    Header="Bezeichnung">
+                    Header="{x:Static p:Resource.purchaseItems_list_label}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -49,7 +50,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding startAmount}" ClipboardContentBinding="{x:Null}"
-                    Header="Anfangsbestand">
+                    Header="{x:Static p:Resource.purchaseItems_list_startAmount}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -62,7 +63,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding discountAmount}" ClipboardContentBinding="{x:Null}"
-                    Header="Discountmenge">
+                    Header="{x:Static p:Resource.purchaseItems_list_discountAmount}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -75,7 +76,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding deliveryTime}" ClipboardContentBinding="{x:Null}"
-                    Header="Lieferzeit">
+                    Header="{x:Static p:Resource.purchaseItems_list_deliveryTime}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -88,7 +89,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding deliveryTimeVariance}" ClipboardContentBinding="{x:Null}"
-                    Header="Lieferzeit&#xA;Abweichung">
+                    Header="{x:Static p:Resource.purchaseItems_list_deliverTimeVariance}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -101,7 +102,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding orderCosts}" ClipboardContentBinding="{x:Null}"
-                    Header="Bestellkosten">
+                    Header="{x:Static p:Resource.purchaseItems_list_orderCosts}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
@@ -114,7 +115,7 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding price}" ClipboardContentBinding="{x:Null}"
-                    Header="Preis">
+                    Header="{x:Static p:Resource.purchaseItems_list_price}">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#16a085" />
